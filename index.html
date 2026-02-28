@@ -1,63 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile of Muhi Uddin</title>
     <link rel="shortcut icon" href="images/muhi.jpg" type="image/x-icon">
     <style>
-        header{
+        html{
+            scroll-behavior: smooth;
+        }
+        header {
             background-color: rgb(119, 17, 77);
             padding: 10px;
         }
+
         .headWords {
-            color:rgb(243, 7, 184);
+            color: rgb(243, 7, 184);
             padding: 2px;
         }
-        nav ul{
+
+        nav ul {
             padding: 0;
             margin: 0;
         }
-        nav li{
+
+        nav li {
             list-style-type: none;
             display: inline-block;
             margin-right: 10px;
-           
+
         }
-        nav a{
+
+        nav a {
             display: inline-block;
             text-decoration: none;
             background: black;
             color: white;
             padding: 10px 15px;
             margin: 2px;
-            font-size:18px;
+            font-size: 18px;
             transition: all 0.3s;
+            /* scroll-behavior: smooth; */
         }
-        a:hover{
+
+        a:hover {
             font-size: 20px;
             color: black;
             background-color: greenyellow;
         }
-        main{
+
+        main {
             padding: 10px;
-            background-color:rgb(173, 58, 121);
+            background-color: rgb(173, 58, 121);
         }
-        h2{
+
+        h2 {
             /* font-family: Georgia, 'Times New Roman', Times, serif; */
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 3px 3px 1px crimson;
         }
-        #aboutMe, #skills, #qualification, #contact {
+
+        h3 {
+            text-shadow: 3px 3px 5px burlywood;
+        }
+
+        #aboutMe,
+        #skills,
+        #qualification,
+        #contact {
             margin: 50px 30px;
             /* border: 10px solid purple; */
             box-shadow: 3px 3px 5px 3px lightcoral;
         }
-        #aboutMeDescription{
-          
+
+        #aboutMeDescription {
+
             text-align: center;
             margin: 10px;
         }
-        #aboutMeDescription img{
+
+        #aboutMeDescription img {
             /* border: 2px solid brown;
             border-radius: 50%;
             justify-self: center; */
@@ -66,60 +89,94 @@
             height: 150px;
             object-fit: cover;
         }
-        #aboutMeDescription img, p{
+
+        #aboutMeDescription img,
+        #aboutMeDescription p {
             margin: 10px;
-            
+
         }
-        table, caption,th, tr, td{
+
+        #skillComponents {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            /* flex-flow:column; */
+        }
+
+        .skillComponent {
+            margin: 15px;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 3px crimson;
+            background-color: lightpink;
+            /* flex-flow:row-reverse; */
+        }
+
+        table,
+        caption,
+        th,
+        tr,
+        td {
             border: 1px solid coral;
             border-collapse: collapse;
             padding: 5px;
             text-align: center;
         }
-        tr:hover{
+
+        tr:hover {
             background-color: aqua;
         }
-        input[type="text"], textarea{
+
+        input[type="text"],
+        textarea {
             border: 2px solid violet;
             display: inline-block;
             width: 90%;
             margin: 5px;
             padding: 5px;
         }
-        input[type="email"]{
+
+        input[type="email"] {
             border: 2px solid violet;
             display: inline-block;
             width: 90%;
             margin: 5px;
             padding: 5px;
         }
-        input[type="submit"]{
-            width:50%;
+
+        input[type="submit"] {
+            width: 50%;
             padding: 10px;
-            font-weight:900;
+            font-weight: 900;
             font-size: large;
             border: 5px solid lightcoral;
             border-radius: 10px;
             margin-bottom: 15px;
         }
-        input[type="submit"]:hover{
-            background-color:greenyellow;
-            color:green;
-        }
 
+        input[type="submit"]:hover {
+            background-color: greenyellow;
+            color: green;
+        }
+        @media (max-width:767px) {
+            #skillComponents{
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <section class="headWords">
             <h1>Muhi Uddin</h1>
-        <h3>
-            Assistant Teacher, Anujani Government Primary School
-        </h3>
+            <h3>
+                Assistant Teacher, Anujani Government Primary School
+            </h3>
         </section>
         <nav>
             <ul>
-                <li> 
+                <li>
                     <a href="#aboutMe">About Me</a>
                 </li>
                 <li>
@@ -139,16 +196,19 @@
             <h2>
                 About Me
             </h2>
-           <section id="aboutMeDescription">
+            <section id="aboutMeDescription">
                 <img src="images/muhi.jpg" alt="photo of Muhi Uddin">
                 <p>
-                    Hello! My name is Muhi Uddin. I am a primary school teacher from Sylhet, Bangladesh. I enjoy teaching young students and helping them learn new things. Recently, I have restarted my journey in web development. I am passionate about technology and always eager to improve my skills.
+                    Hello! My name is Muhi Uddin. I am a primary school teacher from Sylhet, Bangladesh. I enjoy
+                    teaching young students and helping them learn new things. Recently, I have restarted my journey in
+                    web development. I am passionate about technology and always eager to improve my skills.
                 </p>
-           </section>
+            </section>
         </article>
         <article id="skills">
             <h2>Skills</h2>
-            <section>
+            <section id="skillComponents">
+                <section class="skillComponent">
                 <h3>Teaching Skill</h3>
                 <ul>
                     <li>Communication skill</li>
@@ -157,19 +217,20 @@
                     <li>Explaining simple concepts clearly</li>
                 </ul>
             </section>
-            <section>
+            <section class="skillComponent">
                 <h3>Basic Web Development Knowledge</h3>
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
                 </ul>
             </section>
-            <section>
+            <section class="skillComponent">
                 <h3>Language Skill</h3>
                 <ul>
                     <li>Bangla: fluent in writing and speaking</li>
                     <li>English: intermediate proficiency</li>
                 </ul>
+            </section>
             </section>
         </article>
         <article id="qualification">
@@ -177,35 +238,35 @@
                 <caption>Educational Qualification</caption>
                 <thead>
                     <tr>
-                    <th>Name of the Degree</th>
-                    <th>Board/University</th>
-                    <th>Department</th>
-                    <th>Result</th>
-                    <th>Passing Year</th>
-                </tr>
+                        <th>Name of the Degree</th>
+                        <th>Board/University</th>
+                        <th>Department</th>
+                        <th>Result</th>
+                        <th>Passing Year</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
-                    <td>SSC</td>
-                    <td>Sylhet</td>
-                    <td>Science</td>
-                    <td>GPA 4.44</td>
-                    <td>2009</td>
-                </tr>
-                <tr>
-                    <td>HSC</td>
-                    <td>Sylhet</td>
-                    <td>Science</td>
-                    <td>GPA 3.30</td>
-                    <td>2011</td>
-                </tr>
-                <tr>
-                    <td>Honors</td>
-                    <td>Sylhet International University</td>
-                    <td>English</td>
-                    <td>CGPA 3.25</td>
-                    <td>2016</td>
-                </tr>
+                        <td>SSC</td>
+                        <td>Sylhet</td>
+                        <td>Science</td>
+                        <td>GPA 4.44</td>
+                        <td>2009</td>
+                    </tr>
+                    <tr>
+                        <td>HSC</td>
+                        <td>Sylhet</td>
+                        <td>Science</td>
+                        <td>GPA 3.30</td>
+                        <td>2011</td>
+                    </tr>
+                    <tr>
+                        <td>Honors</td>
+                        <td>Sylhet International University</td>
+                        <td>English</td>
+                        <td>CGPA 3.25</td>
+                        <td>2016</td>
+                    </tr>
                 </tbody>
             </table>
         </article>
@@ -221,11 +282,12 @@
                     <input type="email" name="email" id="email" placeholder="name@email.com" required>
                 </p>
                 <p>
-                <label for="opinion">Your opinion</label>
-                
-                    <textarea name="opinion" id="opinion" placeholder="I need your valuable opinions" cols="20" rows="5"></textarea>
+                    <label for="opinion">Your opinion</label>
+
+                    <textarea name="opinion" id="opinion" placeholder="I need your valuable opinions" cols="3"
+                        rows="3"></textarea>
                 </p>
-               <p> <input type="submit" value="Submit"></p>
+                <p> <input type="submit" value="Submit"></p>
             </form>
         </article>
     </main>
@@ -233,4 +295,5 @@
         <small>I wish you all the best</small>
     </footer>
 </body>
+
 </html>
