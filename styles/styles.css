@@ -1,0 +1,204 @@
+:root{
+    --head-words-color:rgb(243, 7, 184);
+    --headers-bg-color: rgb(119, 17, 77);
+    --nav-items-bg-color:black;
+    --nav-fonts-color:white;
+    --main-bg-color:rgb(173, 58, 121);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color:var(--headers-bg-color);
+    padding: 10px;
+}
+
+/* Define the animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.headWords {
+    animation: fadeIn 2s ease-in;
+    animation-fill-mode: forwards;
+    color: var(--head-words-color);
+    padding: 2px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--nav-items-bg-color);
+    color:var(--nav-fonts-color);
+    padding: 10px 15px;
+    margin: 2px;
+    font-size: 18px;
+    transition: all 0.3s;
+    /* scroll-behavior: smooth; */
+}
+
+nav a:hover {
+    font-size: 20px;
+    color: black;
+    background-color: greenyellow;
+}
+
+main {
+    padding: 10px;
+    background-color: var(--main-bg-color);
+}
+
+h2 {
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 3px 3px 1px crimson;
+}
+
+h3 {
+    text-shadow: 3px 3px 5px burlywood;
+}
+
+#aboutMe,
+#skills,
+#qualification,
+#contact {
+    margin: 50px 30px;
+    /* border: 10px solid purple; */
+    box-shadow: 3px 3px 5px 3px lightcoral;
+}
+
+#aboutMeDescription {
+
+    text-align: center;
+    margin: 10px;
+}
+
+#aboutMeDescription img {
+    /* border: 2px solid brown;
+            border-radius: 50%;
+            justify-self: center; */
+    /* width: 50%; */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#aboutMeDescription img,
+#aboutMeDescription p {
+    margin: 10px;
+
+}
+
+#skillComponents {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* flex-flow:column; */
+}
+
+.skillComponent {
+    margin: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px crimson;
+    background-color: lightpink;
+    /* flex-flow:row-reverse; */
+}
+
+table {
+    width: 100%;
+}
+
+table,
+caption,
+th,
+tr,
+td {
+    border: 1px solid coral;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: aqua;
+}
+
+input[type="text"],
+textarea {
+    border: 2px solid violet;
+    display: inline-block;
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+}
+
+input[type="email"] {
+    border: 2px solid violet;
+    display: inline-block;
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    font-weight: 900;
+    font-size: large;
+    border: 5px solid lightcoral;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: greenyellow;
+    color: green;
+}
+
+@media (max-width:767px) {
+    nav>ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #skillComponents {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:768px) {
+    #aboutMeDescription {
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media (min-width:992px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
